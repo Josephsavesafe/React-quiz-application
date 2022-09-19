@@ -1,3 +1,4 @@
+import "./App.css";
 import { createContext, useState } from "react";
 import Menu from "./components/Menu";
 import Quiz from "./components/Quiz";
@@ -9,7 +10,7 @@ function App() {
   const [appState, setAppState] = useState("menu");
 
   return (
-    <DataContext.Provider value={{appState,setAppState}}>
+    <DataContext.Provider value={{ appState, setAppState }}>
       <div className="App">
         <h1>Web Development Quiz</h1>
         {appState === "menu" && <Menu />}
